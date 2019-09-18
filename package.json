@@ -1,6 +1,6 @@
 {
   "name": "reactex",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "TypeSafe Redux Reducers and Actions Library",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -13,7 +13,16 @@
     "type": "git",
     "url": "git+https://github.com/frontainer/reactex.git"
   },
-  "keywords": ["redux", "typescript", "typesafe", "redux-thunk", "react", "reducer", "store", "action"],
+  "keywords": [
+    "redux",
+    "typescript",
+    "typesafe",
+    "redux-thunk",
+    "react",
+    "reducer",
+    "store",
+    "action"
+  ],
   "author": "frontainer",
   "license": "MIT",
   "bugs": {
