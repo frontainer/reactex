@@ -1,0 +1,39 @@
+{
+  "name": "reactex",
+  "version": "0.0.1",
+  "description": "TypeSafe Helper for Reducers and Actions",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "start": "tsc -w",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frontainer/typesafe-redux-thunk.git"
+  },
+  "keywords": [],
+  "author": "frontainer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/frontainer/typesafe-redux-thunk/issues"
+  },
+  "homepage": "https://github.com/frontainer/typesafe-redux-thunk#readme",
+  "dependencies": {
+    "immer": "^4.0.0",
+    "typescript-fsa": "^3.0.0"
+  },
+  "devDependencies": {
+    "redux": "^4.0.4",
+    "redux-thunk": "^2.3.0",
+    "typescript": "^3.6.3"
+  },
+  "peerDependencies": {
+    "redux": "^4.0.4",
+    "redux-thunk": "^2.3.0"
+  },
+  "directories": {
+    "example": "example"
+  }
+}
