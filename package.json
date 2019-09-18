@@ -22,17 +22,14 @@
   "homepage": "https://github.com/frontainer/typesafe-redux-thunk#readme",
   "dependencies": {
     "immer": "^4.0.0",
+    "redux": "^4.0.4",
+    "redux-thunk": "^2.3.0",
     "typescript-fsa": "^3.0.0"
   },
   "devDependencies": {
-    "redux": "^4.0.4",
-    "redux-thunk": "^2.3.0",
     "typescript": "^3.6.3"
   },
-  "peerDependencies": {
-    "redux": "^4.0.4",
-    "redux-thunk": "^2.3.0"
-  },
+  "peerDependencies": {},
   "directories": {
     "example": "example"
   }
