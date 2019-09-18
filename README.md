@@ -100,3 +100,27 @@ export const RootState: IRootState = {
 
 then, call action using dispatch function 
 `dispatch(syncAction('fda'))`
+
+
+## with react-router
+
+store/store.ts
+```
+import history from 'store/history'
+import Reactex from 'reactex'
+import { RootModule } from 'modules/Root/RootModule'
+import { IRootState } from 'modules/Root/RootState'
+import { connectRouter, routerMiddleware, RouterState } from 'connected-react-router'
+
+export type IAppState = {
+  root: IRootState,
+  router: RouterState
+}
+const rStore = new Reactex.Store<IAppState>({
+  root: RootModule.reducer,
+  router: connectRouter(history)
+}, [
+  routerMiddleware(history)
+])
+export default rStore.store
+```
