@@ -1,7 +1,7 @@
 {
   "name": "reactex",
   "version": "0.0.2",
-  "description": "TypeSafe Helper for Reducers and Actions",
+  "description": "TypeSafe Redux Reducers and Actions Library",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/frontainer/typesafe-redux-thunk.git"
+    "url": "git+https://github.com/frontainer/reactex.git"
   },
-  "keywords": [],
+  "keywords": ["redux", "typescript", "typesafe", "redux-thunk", "react", "reducer", "store", "action"],
   "author": "frontainer",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/frontainer/typesafe-redux-thunk/issues"
+    "url": "https://github.com/frontainer/reactex/issues"
   },
-  "homepage": "https://github.com/frontainer/typesafe-redux-thunk#readme",
+  "homepage": "https://github.com/frontainer/reactex#readme",
   "dependencies": {
     "immer": "^4.0.0",
     "redux": "^4.0.4",

@@ -1,13 +1,16 @@
 # reactex
 
-TypeSafe Reducers and Actions Library
+TypeSafe Redux Reducers and Actions Library
 
-Inspired by vuex, typescript-fsa-reducers, typescript-fsa-reducers-thunk, typescript-fsa-redux-thunk
+Inspired by 
+[vuex](https://www.npmjs.com/package/vuex), 
+[typescript-fsa-reducers](https://www.npmjs.com/package/typescript-fsa-reducers), 
+[typescript-fsa-redux-thunk](https://www.npmjs.com/package/typescript-fsa-redux-thunk)
 
 ## dependencies
-- redux
-- redux-thunk
-- immer
+- [redux](https://www.npmjs.com/package/redux)
+- [redux-thunk](https://www.npmjs.com/package/redux-thunk)
+- [immer](https://www.npmjs.com/package/immer)
 
 ## how to use
 
@@ -124,3 +127,17 @@ const rStore = new Reactex.Store<IAppState>({
 ])
 export default rStore.store
 ```
+
+## with redux-devtools
+
+```
+const rStore = new Reactex.Store<IAppState>({
+  root: RootModule.reducer,
+  router: connectRouter(history)
+}, [], true)
+```
+
+## todo
+
+- docs
+- testing
