@@ -138,6 +138,12 @@ const rStore = new Reactex.Store<IAppState>({
 }, [], true)
 ```
 
+## useDispatch with AsyncAction
+
+```
+const asyncDispatch = useDispatch<ThunkDispatch<any, any, AnyAction>>()
+```
+
 ## todo
 
 - docs

@@ -14,4 +14,3 @@ export declare class ReduxModule<State, ProjectState = State> {
     readonly reducer: (base: any, action: AnyAction) => Produced<any, State>;
     case<Payload>(actionCreator: ActionCreator<Payload>, handler: Handler<State, Payload>): this;
 }
-export declare function useAsyncDispatch<S = any, E = Error, A extends AnyAction = AnyAction>(): ThunkDispatch<S, E, A>;

@@ -30,14 +30,12 @@
   },
   "homepage": "https://github.com/frontainer/reactex#readme",
   "dependencies": {
-    "immer": "^4.0.0",
-    "react-redux": "^7.1.1",
+    "immer": "^4.0.1",
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0",
     "typescript-fsa": "^3.0.0"
   },
   "devDependencies": {
-    "@types/react-redux": "^7.1.4",
     "typescript": "^3.6.3"
   },
   "peerDependencies": {},
