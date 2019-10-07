@@ -2,10 +2,12 @@ import produce from 'immer'
 import { Produced } from 'immer'
 import { AnyAction } from 'redux'
 import { ThunkDispatch } from 'redux-thunk'
+
 import { ActionCreator, AsyncActionCreators } from 'typescript-fsa'
 import { ActionFactory, AsyncActions, createActionFactory, ThunkActionCreator } from '../action/async'
 import { Handler, MaybePromise } from '../action/handler'
 import { ReducerBuilder, reducerWithInitialState } from '../reducer/reducer'
+import { useDispatch } from 'react-redux'
 
 export class ReduxModule<State, ProjectState = State> {
   private _generator: ActionFactory<ProjectState>
@@ -47,4 +49,8 @@ export class ReduxModule<State, ProjectState = State> {
     this._reducer.case<Payload>(actionCreator, handler)
     return this
   }
+}
+
+export function useAsyncDispatch<S = any, E = Error, A extends AnyAction = AnyAction>() {
+  return useDispatch<ThunkDispatch<S, E, A>>()
 }

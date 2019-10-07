@@ -9,6 +9,7 @@ Inspired by
 
 ## dependencies
 - [redux](https://www.npmjs.com/package/redux)
+- [react-redux](https://www.npmjs.com/package/react-redux)
 - [redux-thunk](https://www.npmjs.com/package/redux-thunk)
 - [immer](https://www.npmjs.com/package/immer)
 
