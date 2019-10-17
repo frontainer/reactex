@@ -38,3 +38,9 @@ RootModule.case(asyncAction.started, state => {
   state.asyncActionDone = true
   state.asyncActionStatus = 'done'
 })
+
+const RootSubModule = RootModule.subModule('SUB')
+export const syncSubAction = RootSubModule.sync<string>('INIT', (state, payload) => {
+  alert(payload)
+  return state
+})

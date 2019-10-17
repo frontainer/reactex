@@ -8,5 +8,5 @@ export type IAppState = {
 const reducers = {
   root: RootModule.reducer
 }
-const rStore = new Reactex.Store<IAppState>(reducers)
+const rStore = new Reactex.Store<IAppState>(reducers, [], true)
 export default rStore.store
