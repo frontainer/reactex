@@ -25,11 +25,11 @@ export class ReduxStore<S> {
     if (!debug || typeof window === 'undefined') {
       return compose
     }
-    if (!window.hasOwnProperty(__NEXT_REDUX_STORE__)) {
-      (window as any)[__NEXT_REDUX_STORE__] = compose
+    if (window.hasOwnProperty(__NEXT_REDUX_STORE__)) {
+      return (window as any)[__NEXT_REDUX_STORE__]
     }
-    if (!window.hasOwnProperty(__REDUX_DEVTOOLS_EXTENSION_COMPOSE__)) {
-      (window as any)[__REDUX_DEVTOOLS_EXTENSION_COMPOSE__] = compose
+    if (window.hasOwnProperty(__REDUX_DEVTOOLS_EXTENSION_COMPOSE__)) {
+      return (window as any)[__REDUX_DEVTOOLS_EXTENSION_COMPOSE__]
     }
     return compose
   }
