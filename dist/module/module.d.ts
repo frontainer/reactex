@@ -1,4 +1,4 @@
-import { Produced } from 'immer';
+import { Produced } from 'immer/dist/types/types-external';
 import { AnyAction } from 'redux';
 import { ThunkDispatch } from 'redux-thunk';
 import { ActionCreator, AsyncActionCreators } from 'typescript-fsa';
@@ -16,7 +16,7 @@ export declare class ReduxModule<State, ProjectState = State> extends AbsReduxSu
     name: string;
     constructor(name: string, initialState: State);
     subModule(name: string): ReduxSubModule<State, ProjectState>;
-    readonly reducer: (base: any, action: AnyAction) => Produced<any, State>;
+    get reducer(): (base: any, action: AnyAction) => Produced<any, State>;
 }
 export declare class ReduxSubModule<State, ProjectState = State> extends AbsReduxSubModule<State, ProjectState> {
     name: string;
