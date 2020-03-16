@@ -1,5 +1,5 @@
 import produce from 'immer'
-import { Produced } from 'immer'
+import { Produced } from 'immer/dist/types/types-external'
 import { AnyAction } from 'redux'
 import { ThunkDispatch } from 'redux-thunk'
 
