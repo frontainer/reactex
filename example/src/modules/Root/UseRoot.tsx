@@ -10,7 +10,7 @@ export const useRoot = () => {
   const rootState = useSelector<IAppState, IRootState>(rootSelector)
   useEffect(() => {
     batch(() => {
-      dispatch(syncAction('fda'))
+      dispatch(syncAction())
       dispatch(syncSubAction('test'))
       dispatch(asyncAction())
     })
