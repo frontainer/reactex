@@ -1,11 +1,10 @@
 import { IAppState } from '../../store/store'
-import Reactex from 'reactex'
+import { ReduxModule } from 'reactex'
 import { IRootState, RootState } from './RootState'
 
-export const RootModule = new Reactex.Module<IRootState, IAppState>('ROOT', RootState)
+export const RootModule = new ReduxModule<IRootState, IAppState>('ROOT', RootState)
 
-export const syncAction = RootModule.sync<string>('INIT', (state, payload) => {
-
+export const syncAction = RootModule.sync<void>('INIT', (state, payload) => {
   state.syncActionDone = true
   return state
 })
@@ -32,7 +31,7 @@ export const asyncAction = RootModule.async<void, unknown, Error>('INIT2', async
 RootModule.case(asyncAction.started, state => {
   state.asyncActionStatus = 'started'
 }).case(asyncAction.failed, (state, { error }) => {
-  console.error(error)
+  // console.error(error)
   state.asyncActionStatus = 'failed'
 }).case(asyncAction.done, (state, { params, result }) => {
   state.asyncActionDone = true
@@ -41,6 +40,6 @@ RootModule.case(asyncAction.started, state => {
 
 const RootSubModule = RootModule.subModule('SUB')
 export const syncSubAction = RootSubModule.sync<string>('INIT', (state, payload) => {
-  alert(payload)
+  // alert(payload)
   return state
 })

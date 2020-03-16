@@ -1,4 +1,4 @@
-import Reactex from 'reactex'
+import { ReduxStore } from 'reactex'
 import { RootModule } from '../modules/Root/RootModule'
 import { IRootState } from '../modules/Root/RootState'
 
@@ -8,5 +8,5 @@ export type IAppState = {
 const reducers = {
   root: RootModule.reducer
 }
-const rStore = new Reactex.Store<IAppState>(reducers, [], true)
+const rStore: ReduxStore<IAppState> = new ReduxStore<IAppState>(reducers, [], true)
 export default rStore.store
