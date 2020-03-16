@@ -4,5 +4,6 @@ export declare class ReduxStore<S> {
     private _combineReducers;
     get store(): Store<S, AnyAction>;
     get combineReducers(): Reducer<S>;
+    private _createComposer;
     constructor(reducers: ReducersMapObject<S, AnyAction>, middlewares?: Middleware<any, S, any>[], debug?: boolean);
 }
