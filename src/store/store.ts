@@ -12,7 +12,7 @@ import thunkMiddleware from 'redux-thunk'
 const __REDUX_DEVTOOLS_EXTENSION_COMPOSE__ = '__REDUX_DEVTOOLS_EXTENSION_COMPOSE__'
 const __NEXT_REDUX_STORE__ = '__NEXT_REDUX_STORE__'
 
-export class ReduxStore<S> {
+export class ReduxStore<S, A = AnyAction> {
   private _store: Store<S, AnyAction>
   private _combineReducers: Reducer<S>
   get store(): Store<S, AnyAction> {
@@ -33,7 +33,7 @@ export class ReduxStore<S> {
     }
     return compose
   }
-  constructor(reducers: ReducersMapObject<S, AnyAction>, middlewares: Middleware<any, S, any>[] = [], debug: boolean = false) {
+  constructor(reducers: ReducersMapObject<S, A>, middlewares: Middleware<any, S, any>[] = [], debug: boolean = false) {
     const composeEnhancers = this._createComposer(debug)
     this._combineReducers = combineReducers(reducers)
     this._store = _createStore<S, AnyAction, any, any>(
